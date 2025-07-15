@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("9wGA0E6Y-IcIhWIRn");
+
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         if (window.scrollY > 100) {
@@ -38,17 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el);
     });
 
-    document.querySelector('form').addEventListener('submit', function (e) {
+    document.querySelector('form').addEventListener('submit', async function (e) {
         e.preventDefault();
         const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-        const emailBody = `Tên: ${name}%0AEmail: ${email}%0AChủ đề: ${subject}%0A%0ATin nhắn:%0A${message}`;
-        window.location.href = `mailto:lytranquoctin220607@gmail.com?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
-        this.reset();
-        alert('Cảm ơn bạn đã liên hệ! Email client sẽ được mở để gửi tin nhắn.');
+
+        try {
+            const response = await emailjs.send("service_5l61jbu", "template_contact_form", {
+                subject: formData.get('subject'),
+                from_name: formData.get('name'),
+                from_email: formData.get('email'),
+                message: formData.get('message'),
+            });
+
+            console.log("Email send successfull!. Response: ", response);
+            alert("Cảm ơn bạn đã liên hệ! Tin nhắn đã được gửi thành công.");
+            this.reset();
+        } catch (error) {
+            console.log("Error while sending email. Error: ", (e));
+            alert("Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.");
+            return;
+        }
     });
 
     function typeWriter(element, text, speed = 100) {
@@ -76,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 if (heroSubtitle) {
-                    typeWriter(heroSubtitle, 'Học sinh Chuyên Tin học | Gia Sư Tin học | Nhà phát triển Website', 50);
+                    typeWriter(heroSubtitle, 'Học sinh Chuyên Tin học | Giảng viên Tin học | Nhà phát triển Website', 50);
                 }
             }, 2000);
         }, 500);

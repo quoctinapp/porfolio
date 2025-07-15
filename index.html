@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Lý Trần Quốc Tín</title>
+    <link rel="icon" href="web_icon.png" type="image/png">
     <meta name="description" content="Gia sư tin học - Nhà phát triển website chyên giảng dạy, hỗ trợ các dự án học tập và KHKT">
     <meta name="keywords" content="Portfolio, Ly Tran Quoc Tin, Lý Trần Quốc Tín, lập trình, web, react, flask, python, tin học, khoa học kỹ thuật, học sinh, Cần Thơ">
     <meta name="author" content="Lý Trần Quốc Tín">
@@ -13,17 +15,18 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio | Lý Trần Quốc Tín">
     <meta property="og:description" content="Gia sư tin học - Nhà phát triển website chyên giảng dạy, hỗ trợ các dự án học tập và KHKT">
-    <meta property="og:url" content="https://quoctinapp.github.io/porfolio/">
-    <meta property="og:image" content="https://quoctinapp.github.io/porfolio/web_image.png">
+    <meta property="og:url" content="http://123.22.250.148:2206">
+    <meta property="og:image" content="http://123.22.250.148:2206/web_image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio | Lý Trần Quốc Tín">
     <meta name="twitter:description" content="Gia sư tin học - Nhà phát triển website chyên giảng dạy, hỗ trợ các dự án học tập và KHKT">
-    <meta name="twitter:image" content="https://quoctinapp.github.io/porfolio/web_image.png">
+    <meta name="twitter:image" content="http://123.22.250.148:2206/web_image.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/b9f41765cc.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="web_icon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
+
 <body>
     <header id="header">
         <nav class="head-container">
@@ -38,6 +41,7 @@
             </ul>
         </nav>
     </header>
+
     <i class="fa-solid fa-bars" id="responsive-icon"></i>
     <section class="hero" id="home">
         <div class="floating-elements">
@@ -54,6 +58,7 @@
             <a href="#contact" class="cta-button">Liên hệ ngay</a>
         </div>
     </section>
+
     <section id="about" class="fade-in">
         <div class="container">
             <h2 class="section-title">Giới thiệu bản thân</h2>
@@ -82,6 +87,7 @@
             </div>
         </div>
     </section>
+
     <section id="skills" class="fade-in">
         <div class="container">
             <h2 class="section-title">Kỹ năng</h2>
@@ -136,6 +142,8 @@
             </div>
         </div>
     </section>
+
+
     <section id="achievements" class="fade-in">
         <div class="container">
             <h2 class="section-title">Thành tích</h2>
@@ -188,6 +196,7 @@
             </div>
         </div>
     </section>
+
     <section id="services" class="fade-in">
         <div class="container">
             <h2 class="section-title">Dịch vụ</h2>
@@ -242,6 +251,7 @@
             </div>
         </div>
     </section>
+
     <section id="contact" class="fade-in">
         <div class="container">
             <h2 class="section-title">Liên hệ</h2>
@@ -266,7 +276,7 @@
                         <div class="contact-icon">🌐</div>
                         <div>
                             <strong>Facebook:</strong><br>
-                            <a href="https://www.facebook.com/quoctin.lytran.75" target="_blank">Quoc Tin Ly Tran</a>
+                            <a href="https://www.facebook.com/quotin.lytran.75" target="_blank">Quoc Tin Ly Tran</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -287,19 +297,19 @@
                     <form>
                         <div class="form-group">
                             <label for="name">Họ tên</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required placeholder="Nhập họ và tên của bạn....">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required placeholder="Nhập email của bạn....">
                         </div>
                         <div class="form-group">
                             <label for="subject">Tiêu đề</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" required placeholder="Nhập tiêu đề email....">
                         </div>
                         <div class="form-group">
                             <label for="message">Tin nhắn</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Nhập tin nhắn của bạn ...."></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Gửi tin nhắn</button>
                     </form>
@@ -307,12 +317,15 @@
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Lý Trần Quốc Tín. All rights reserved.</p>
+                <p>&copy; 2024 Lý Trần Quốc Tín. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
 </body>
+
 </html>
