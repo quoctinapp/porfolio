@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 if (heroSubtitle) {
-                    typeWriter(heroSubtitle, 'Học sinh Chuyên Tin học | Giảng viên Tin học | Nhà phát triển Website', 50);
+                    typeWriter(heroSubtitle, 'Học sinh Chuyên Tin học | Gia Sư Tin học | Nhà phát triển Website', 50);
                 }
             }, 2000);
         }, 500);
